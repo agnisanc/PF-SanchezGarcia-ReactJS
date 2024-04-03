@@ -1,0 +1,14 @@
+.itemDetail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details{
+    font-family: "Playfair Display", serif;
+}

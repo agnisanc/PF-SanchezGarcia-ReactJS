@@ -1,0 +1,17 @@
+.productCard{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.link {
+    color: black;
+    text-decoration: none; /* Quita la decoración de texto */
+}
+
+.link:hover {
+    color: grey; /* Cambia el color de texto al pasar el mouse sobre los enlaces */
+}

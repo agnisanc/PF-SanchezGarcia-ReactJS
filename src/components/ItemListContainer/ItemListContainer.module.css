@@ -1,0 +1,15 @@
+.greeting{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
