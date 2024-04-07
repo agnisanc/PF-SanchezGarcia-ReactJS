@@ -30,16 +30,24 @@ const ItemDetail = ({ name, category, stock, price, image, type, id}) => {
             <h3>Material: {category}</h3>
             <h3>Tipo: {type}</h3>
             <h3>${price}</h3>
-            </div>
-            <footer>
+            <footer >
                 {
                     quantity === 0 ? (
-                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
+                        <ItemCount onAdd={handleOnAdd} stock={stock} />
                     ) : (
-                        <Link to='/cart'>Finalizar tu compra!</Link>
+                        <div className={classes.buttonContainer}>
+                            <div className={classes.buttonSection}>
+                            <Link to='/cart' className={`${classes.button} ${classes.buttonHover}`}>INICIA TU COMPRA!</Link>
+                            </div>
+                            <div>
+                                <Link to='/' className={`${classes.button} ${classes.buttonHover}`}>SEGUIR COMPRANDO</Link>
+                            </div>
+                        </div>
                     )
                 }
             </footer>
+            </div>
+
         </article>
     )
 }

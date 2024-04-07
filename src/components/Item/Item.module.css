@@ -5,13 +5,16 @@
     font-family: "Playfair Display", serif;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
 }
 
 .link {
     color: black;
-    text-decoration: none; /* Quita la decoración de texto */
+    text-decoration: none; 
 }
 
 .link:hover {
-    color: grey; /* Cambia el color de texto al pasar el mouse sobre los enlaces */
+    color: grey; 
 }

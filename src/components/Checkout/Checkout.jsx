@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import { db } from "../../services/firebase/firebaseConfig"
 import { collection, query, where, documentId, getDocs, addDoc, writeBatch  } from "firebase/firestore"
 import { Link } from "react-router-dom"
+import classes from "./Checkout.module.css"
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -85,14 +86,21 @@ const Checkout = () => {
     }
 
     if(loading) {
-        return <h3>Tu orden esta siendo generada. Por favor, aguarda.</h3>
+        return (
+            <div className={classes.brief}>
+            <h3 className={classes.sectionTitle}>Tu orden esta siendo generada. Por favor, aguarda.</h3>
+            </div>
+        )
     }
 
     if(orderId){
         return(
-        <div>
-        <h2>Su codigo de compra es: {orderId}</h2>
-        <Link to='/'>Volver al inicio</Link>
+        <div className={classes.brief}>
+        <h2 className={classes.sectionTitle}>Su codigo de compra es: {orderId}</h2>
+        <h2 className={classes.sectionTitle}>Muchas gracias por su compra!</h2>
+        <div className={classes.buttonContainer}>
+        <Link to='/' className={`${classes.button} ${classes.buttonHover}`}>Volver al inicio</Link>
+        </div>
         </div>)
     }
 
@@ -102,22 +110,22 @@ const Checkout = () => {
 
     return (
         <div>
-            <h2>Ingresa tus datos para finalizar la compra:</h2>
-            <form>
-            <div>
-                <label>Nombre</label>
+            <h2 className={classes.sectionTitle}>Ingresa tus datos para finalizar la compra:</h2>
+            <form className={classes.formDisplay}>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Nombre</label>
                 <input type="text" name="name" value={userData.name} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Tarjeta de Credito</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Tarjeta de Credito</label>
                 <input type="number" name="card" value={userData.card} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Codigo de seguridad</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Codigo de seguridad</label>
                 <input type="number" name="code" value={userData.code} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Numero de cuotas</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Numero de cuotas</label>
                 <select value={userData.fees} onChange={handleInputChange}>
                     <option>1 cuota</option>
                     <option>3 cuotas</option>
@@ -125,32 +133,34 @@ const Checkout = () => {
                     <option>12 cuotas</option>
                 </select>
             </div>
-            <div>
-                <label>Telefono</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Telefono</label>
                 <input type="number" name="phone" value={userData.phone} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Correo electronico</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Correo electronico</label>
                 <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Confirme su correo electronico</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Confirme su correo electronico</label>
                 <input type="email" name="confirmEmail" value={userData.confirmEmail} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Direccion en la Ciudad de Córdoba</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Direccion en la Ciudad de Córdoba</label>
                 <input type="text" name="adress" value={userData.adress} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Altura</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Altura</label>
                 <input type="number" name="numberAdress" value={userData.numberAdress} onChange={handleInputChange} />
             </div>
-            <div>
-                <label>Codigo Postal</label>
+            <div className={classes.formInput}>
+                <label className={classes.formTitle}>Codigo Postal</label>
                 <input type="number" name="postal" value={userData.postal} onChange={handleInputChange} />
             </div>
             </form>
-            <button onClick={createOrder}>Comprar!</button>
+            <div className={classes.buttonContainer}>
+                <button onClick={createOrder} className={`${classes.button} ${classes.buttonHover}`}>Comprar!</button>
+            </div>
         </div>
     )
 }

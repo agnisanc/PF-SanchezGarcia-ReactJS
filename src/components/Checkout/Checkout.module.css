@@ -1,0 +1,53 @@
+.sectionTitle{
+text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+.formDisplay{
+    display: grid;
+    justify-content: center;
+
+    flex-direction: row;
+}
+
+.formInput{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.formTitle{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.button{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.buttonContainer{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 4rem
+}
+
+.buttonHover:hover {
+    color: grey;
+}
+
+.brief{
+display: grid;
+justify-content: center;
+margin-top: 5rem;
+
+}

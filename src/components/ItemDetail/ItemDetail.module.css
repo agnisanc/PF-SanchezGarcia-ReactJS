@@ -11,4 +11,27 @@
 }
 .details{
     font-family: "Playfair Display", serif;
+    margin-bottom: 1rem;
+}
+
+.button{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.buttonContainer{
+    margin-top: 3rem
+}
+
+.buttonSection{
+    margin-bottom: 2rem;
+}
+
+.buttonHover:hover {
+    color: grey;
 }

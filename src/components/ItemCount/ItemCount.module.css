@@ -1,0 +1,31 @@
+.button{
+    appearance: none;
+    border: none;
+    padding: 0.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
+}
+
+.buttonAdd{
+    appearance: none;
+    border: none;
+    padding: 0.2rem;
+    margin: 1rem;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+button:hover {
+    color: grey; 
+}

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import classes from "./ItemCount.module.css"
 
 
 const ItemCount = ({initial = 1, stock, onAdd}) => {
@@ -19,11 +20,11 @@ const ItemCount = ({initial = 1, stock, onAdd}) => {
 
 
     return (
-        <article>
+        <article >
             <h4>{count}</h4>
-            <button onClick = {() => onAdd(count)}>Agregar</button>
-            <button onClick = {increase}>+</button>
-            <button onClick = {decrease}>-</button>
+            <button onClick = {() => onAdd(count)} className={classes.button}>AGREGAR</button>
+            <button onClick = {increase} className={classes.buttonAdd}>+</button>
+            <button onClick = {decrease}className={classes.buttonAdd}>-</button>
         </article>
     )
 }
