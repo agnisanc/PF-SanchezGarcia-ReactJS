@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import classes from "./CartView.module.css"
 
 const CartView = () => {
-    const { cart } = useContext(CartContext)
+    const { cart, removeItem } = useContext(CartContext)
     
     const totalAmount = () => {
         let total = 0;
@@ -45,6 +45,9 @@ const CartView = () => {
                             <h3>{prod.quantity}</h3>
                             <h3>{prod.name}</h3>
                             <h3>$ {prod.price}</h3>
+                            <div>
+                            <button className={`${classes.delete} ${classes.buttonHover}`} onClick={() => removeItem(prod.id)}>Eliminar</button>
+                            </div>
                         </article>
                         </div>
                     )

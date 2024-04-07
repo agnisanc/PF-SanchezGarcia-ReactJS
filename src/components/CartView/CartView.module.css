@@ -6,7 +6,7 @@
 
 .headlines{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 1.2rem;
@@ -14,7 +14,7 @@
 
 .details{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 1.1rem;
@@ -46,6 +46,16 @@
     margin-top: 2rem;
     padding: 0.5rem;
     font-size: 1.5rem;
+}
+
+.delete{
+
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    margin-top: 2rem;
+    font-size: 1rem;
 }
 
 .buttonHover:hover {
